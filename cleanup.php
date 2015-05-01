@@ -44,8 +44,14 @@ function includeAccount($line) {
 			case "CS - Research & Consulting":
 			case "CS - Rush Work":
 			case "CS - Training & Documentation":
+
 				$account = "CiviCRM Hourly Support";
 				break;
+			case "CSP - On Contract":
+				$account = "CiviCRM Flat Rate Income";
+
+			    break;
+
 			case "DCP - Development":
 			case "DCP - Free Work":
 			case "DCP - Meetings and Phone Calls":
@@ -113,6 +119,9 @@ function includeAccount($line) {
 			case "M - Research & Consulting":
 			case "M - Rush Work":
 			case "M - Training & Documentation":
+			case "M - Training":
+
+			
 				$account = "Miscellaneous Development";
 				break;
 			case "MSP - off contract":

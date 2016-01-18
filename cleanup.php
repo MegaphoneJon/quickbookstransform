@@ -26,7 +26,11 @@ function includeAccount($line) {
 				break;
 			case "CiviCRM Support Plan":
 				$account = "Drupal - Flat Rate Income";
-				break;
+                break;
+            case "Deposit":
+                $account = "Project Deposit";
+                break;
+
 			case "CP - Development":
 			case "CP - Free Work":
 			case "CP - Meetings and Phone Calls":
@@ -44,8 +48,20 @@ function includeAccount($line) {
 			case "CS - Research & Consulting":
 			case "CS - Rush Work":
 			case "CS - Training & Documentation":
+
 				$account = "CiviCRM Hourly Support";
-				break;
+                break;
+            case "CSP - Off Contract":
+            case "CSP - Included Work to X hours":
+                $account = "CiviCRM Maintenance Extra Work";
+                break;
+            case "CSP - On Contract":
+            case "CiviCRM Maintenance Plan":
+            case "CSP - Community Support":
+				$account = "CiviCRM Flat Rate Income";
+
+			    break;
+
 			case "DCP - Development":
 			case "DCP - Free Work":
 			case "DCP - Meetings and Phone Calls":
@@ -79,8 +95,15 @@ function includeAccount($line) {
 				$account = "Drupal Project";
 				break;
 			case "Drupal Support Plan":
-			case "DP - Flat rate":
-				$account = "Drupal - Flat Rate Income";
+            case "DP - Flat rate":
+            case "Drupal Maintenance Plan":
+                $account = "Drupal - Flat Rate Income";
+                break;
+            case "DSP - Rush Work":
+            case "DSP - Off Contract":
+            case "DSP - Included work to X hours":
+            case "DSP - Free Work":
+                $account = "Drupal Support Plan - Extra Work";
 				break;
 			case "DS - Development":
 			case "DS - Free Work":
@@ -90,11 +113,11 @@ function includeAccount($line) {
 			case "DS - Rush Work":
 			case "DS - Site Updates & Maintenance":
 			case "DS - Training & Documentation":
-			case "DSP - Rush Work":
 				$account = "Drupal Hourly Support";
 				break;
 			case "E - E-commerce Development":
-			case "E - Free Work":
+            case "E - Free Work":
+            case "E - Rush Work":
 			case "E - Meetings and Phone Calls":
 			case "E - Project Management":
 			case "E - Research & Consulting":
@@ -113,9 +136,16 @@ function includeAccount($line) {
 			case "M - Research & Consulting":
 			case "M - Rush Work":
 			case "M - Training & Documentation":
+            case "M - Training":
+            case "Training":
+
+			
 				$account = "Miscellaneous Development";
-				break;
-			case "MSP - off contract":
+                break;
+            case "MSP - off contract":
+            case "MSP - Included work to X hours":
+                $account = "Managed Service - Extra work";
+                break;
 			case "TS - Free Work":
 			case "TS - Onsite Support":
 			case "TS - Meetings and Phone Calls":
@@ -124,7 +154,13 @@ function includeAccount($line) {
 			case "TS - Research & Consulting":
 			case "TS - Rush Work":
 				$account = "Tech Support Hourly";
-				break;
+                break;
+            case "VPS Maintenance Plan":
+                $account = "VPS Maintenance Plan";
+                break;
+            case "Plan Setup":
+                $account = "Drupal or Civi Plan Setup";
+                break;
 			case "VPS - Rush Support":
 			case "VPS - Support":
 				$account = "VPS Hourly Support";
